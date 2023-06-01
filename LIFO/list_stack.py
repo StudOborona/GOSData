@@ -1,15 +1,16 @@
-class Queue:
+class Stack:
     def __init__(self):
         self.items = []
     def add(self, item):
-        self.items.insert(0, item)
+        self.items.insert(len(self.items), item)
     def remove(self):
-        return self.items.pop()
+        return self.items.pop(0)
     
     def __str__(self) -> str:
         return ", ".join(self.items)
 
-q = Queue()
+
+q = Stack()
 q.add("kot")
 q.add("koshka")
 q.add("sobak")
